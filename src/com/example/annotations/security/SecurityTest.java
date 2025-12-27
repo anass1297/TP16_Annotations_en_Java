@@ -13,7 +13,7 @@ public class SecurityTest {
         SecurityTest obj = new SecurityTest();
         Method m = SecurityTest.class.getMethod("supprimerUtilisateur");
 
-        SecurityContext.setRole("USER"); // changer en "ADMIN"
+        SecurityContext.setRole("ADMIN"); 
         SecurityProcessor.checkAccess(m);
         m.invoke(obj);
     }
